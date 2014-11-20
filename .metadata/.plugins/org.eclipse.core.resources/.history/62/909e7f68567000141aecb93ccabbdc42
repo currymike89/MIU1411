@@ -60,8 +60,6 @@ exports.addItToTable = function(){
 	});
 	
 	//nothing testing github push
-	//more comments
-	//blahhhh blahhh
 	
 	enterDataView.add(enterInfoButton);
 	enterDataView.add(enterTitle);
