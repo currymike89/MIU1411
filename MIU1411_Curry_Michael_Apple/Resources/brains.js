@@ -78,7 +78,8 @@ brainFunction = function() {
 		var popUpMenu = function(movie) {
 			var popUpWindow = Ti.UI.createWindow({
 				backgroundColor : "#fff",
-				height : 375,
+				height : "75%",
+				top: 0,
 				//width : "90%",
 				//top : 90,
 				opacity : 0.9,
