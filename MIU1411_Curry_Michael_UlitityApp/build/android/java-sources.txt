@@ -1,0 +1,8 @@
+"/Users/Mike/Desktop/MIU/MIU(1411)_Curry_Michael_UlitityApp/build/android/gen/android/support/v7/appcompat/R.java"
+"/Users/Mike/Desktop/MIU/MIU(1411)_Curry_Michael_UlitityApp/build/android/gen/com/ulitityapp/fullsail/ApplicationStylesheet.java"
+"/Users/Mike/Desktop/MIU/MIU(1411)_Curry_Michael_UlitityApp/build/android/gen/com/ulitityapp/fullsail/AssetCryptImpl.java"
+"/Users/Mike/Desktop/MIU/MIU(1411)_Curry_Michael_UlitityApp/build/android/gen/com/ulitityapp/fullsail/Miu1411_curry_michael_ulitityappActivity.java"
+"/Users/Mike/Desktop/MIU/MIU(1411)_Curry_Michael_UlitityApp/build/android/gen/com/ulitityapp/fullsail/Miu1411_curry_michael_ulitityappAppInfo.java"
+"/Users/Mike/Desktop/MIU/MIU(1411)_Curry_Michael_UlitityApp/build/android/gen/com/ulitityapp/fullsail/Miu1411_curry_michael_ulitityappApplication.java"
+"/Users/Mike/Desktop/MIU/MIU(1411)_Curry_Michael_UlitityApp/build/android/gen/com/ulitityapp/fullsail/R.java"
+"/Users/Mike/Desktop/MIU/MIU(1411)_Curry_Michael_UlitityApp/build/android/gen/ti/modules/titanium/ui/R.java"
