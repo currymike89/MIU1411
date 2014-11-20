@@ -10,6 +10,7 @@ OUTGOING_COLOR=0,0,0
 RESOLVED_COLOR=221,255,221
 additionIndicationColor=221,255,221
 changeIndicationColor=221,255,221
+com.aptana.editor.common.characterPairColor=127,127,127
 currentLineColor=232,242,254
 deletionIndicationColor=255,238,238
 eclipse.preferences.version=1
