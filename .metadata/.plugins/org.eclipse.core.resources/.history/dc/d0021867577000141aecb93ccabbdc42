@@ -62,7 +62,6 @@ exports.addItToTable = function(){
 	//nothing testing github push
 	//more comments
 	//blahhhh blahhh
-	//boo boo chew
 	
 	enterDataView.add(enterInfoButton);
 	enterDataView.add(enterTitle);
