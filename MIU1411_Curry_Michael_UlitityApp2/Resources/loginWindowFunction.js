@@ -4,12 +4,14 @@
 
 exports.loginData = function(e){
 	
-	if(yourEmail.value === "" || confirmEmail.value === "" ||yourPassword.value === "" || confirmEmail.value === "" ){
+	if(yourEmail.value === "" || confirmEmail.value === "" ||
+	   yourPassword.value === "" || confirmEmail.value === "" ){
 		
-		dataWindow.dataInfo();
+		//dataWindow.dataInfo();
 		alert("Can't leave field/s blank");
 	
-	}else if(yourEmail.value.indexOf("@") < 0 && yourEmail.value.indexOf(".") < 0 ){
+	}else if(yourEmail.value.indexOf("@") < 0 && 
+	         yourEmail.value.indexOf(".") < 0 ){
 		
 		alert("Not a valid email address");
 	
@@ -27,7 +29,32 @@ exports.loginData = function(e){
 	
 	}else{
 		
-		//dataWindow.dataInfo();
+		if(osName === "iphone"){
+		    
+		    var loginComplete;
+            
+            loginComplete = Ti.UI.createNotification({
+                message: "Login Successful",
+                duration: Ti.UI.NOTIFICATION_DURATION_SHORT
+            });
+            
+            loginComplete.show();
+		           
+		    
+		}else{
+		    
+		    var loginComplete;
+		    
+		    loginComplete = Ti.UI.createNotification({
+		        message: "Login Successful",
+		        duration: Ti.UI.NOTIFICATION_DURATION_SHORT
+		    });
+		    
+		    loginComplete.show();
+		    
+		}
+		
+		dataWindow.dataInfo();
 		
 	}
 

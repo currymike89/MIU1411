@@ -2,21 +2,18 @@
 
 //figures out if were on IOS or Android
 var osName = Ti.Platform.osname;
-
+var navWindow, mainWindow, dataWindow, loginWindow, myJsonPage, getDetailView;
 
 if(osName === "iphone"){
-	
 	//IOS main UI elements
 	
 	Titanium.UI.setBackgroundColor("#fff");
 	
-	var navWindow, mainWindow, dataWindow, loginWindow, myJsonPage, addFunction;
-	
+	getDetailView = require("detailView");
 	mainWindow = require("mainWindowView").mainWindow;
 	dataWindow = require("dataWindowView");
 	loginFunction = require("loginWindowFunction"); 
 	myJsonPage = require("myJSON");
-	addFunction = require("addFunction");
 	
 	navWindow = Ti.UI.iOS.createNavigationWindow({
 		window: mainWindow
@@ -29,11 +26,10 @@ if(osName === "iphone"){
 	
 	Titanium.UI.setBackgroundColor("#fff");
 	
-	var navWindow, mainWindow, dataWindow, loginWindow, myJsonPage;
-	
+	getDetailView = require("detailView");
 	mainWindow = require("mainWindowView").mainWindow;
-	dataWindow = require("dataWindowView");
-	loginFunction = require("loginWindowFunction");
-	myJsonPage = require("myJSON");
+    dataWindow = require("dataWindowView");
+    loginFunction = require("loginWindowFunction"); 
+    myJsonPage = require("myJSON");
 	
 }

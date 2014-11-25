@@ -5,15 +5,13 @@
 //Page with my rows to populate TableView
 
 exports.dataInfo = function(){
-	
 	//var todoList = require("myJSON");
 	// getting the the habit of commenting my code
 	var dataPage, dataTable, dataArray;
 	
-	
 	//creates Window for Table View
 	dataPage = Ti.UI.createWindow({
-		backgroundColor: "#fff",
+		backgroundColor: "red",
 		
 	});
 	
@@ -22,14 +20,11 @@ exports.dataInfo = function(){
 		style: Ti.UI.iPhone.TableViewStyle.GROUPED
 	}); 
 	
-	
 	//very important later for displaying and catch the information for my rows
 	dataArray = [];
 	
-	
 	//still trying to master this concept
 	// cycles through my JSON data 
-	
 	for (n in myJsonPage.myJSON)
 	for(var i = 0; i< myJsonPage.myJSON[n].length; i++){
 		var testWindow;
@@ -39,8 +34,10 @@ exports.dataInfo = function(){
 			title: myJsonPage.myJSON[n][i].title,
 			subj: myJsonPage.myJSON[n][i].subject,
 			comp: myJsonPage.myJSON[n][i].compose,
-			
-			
+			info: myJsonPage.myJSON[n][i],
+			editable: true,
+			color: "#000"
+		
 		});
 		
 		
@@ -50,12 +47,11 @@ exports.dataInfo = function(){
 		
 		}else{
 			
+			testWindow.color = "#000";
 			testWindow.height = 60;
-			testWindow.setBackgroundColor("orange");
-			testWindow.color = "red";
-					
+			testWindow.setBackgroundColor("#F5F2F7");
 			
-		
+					
 		}
 		
 		//after applying all the json data I want on the rows 
@@ -70,33 +66,43 @@ exports.dataInfo = function(){
 	//I tend to forget myself alot but add the table silly
 	dataPage.add(dataTable);
 	
+	dataTable.addEventListener("click", function(evt){
+	   
+	   // console.log(evt.source.title);
+	   // console.log(evt.source.subj);
+	   // console.log(evt.source.comp);
+	   getDetailView.getDetailViewFunction(evt.source.info);
+	
+	});
+	
+	dataTable.addEventListener("longpress", function(event){
+	   var longPressAction;
+	   
+	   longPressAction = Ti.UI.createOptionDialog({
+	       
+	       options: ['Confirm', 'Help', 'Cancel'],
+	       cancel: 2,
+           selectedIndex: 2,
+           destructive: 0,
+           title: 'Delete File?'  
+	   
+	   });
+	   
+	   longPressAction.show();
+	
+	});
 	
 	//either opens iphone version or andriod version 
 	// got platform specific code inside my conditional too
 	if(osName === "iphone"){
 		
 		//ios specific
-		var addButton = Ti.UI.createButton({
-			systemButton: Ti.UI.iPhone.SystemButton.ADD,
-			isIt: true,
-			
-		});
-		
-		addButton.addEventListener("click", function(e){
-			
-			addFunction.addItToTable();
-			
-		});
-		
-		
-		dataPage.setRightNavButton(addButton);
 		navWindow.openWindow(dataPage);
-		
 		
 		//navWindow.openWindow(testWindow);
 		
-	
 	}else{
+		
 		
 		dataPage.open();
 	

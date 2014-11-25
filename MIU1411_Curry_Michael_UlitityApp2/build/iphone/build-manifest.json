@@ -14,7 +14,7 @@
 	"publisher": "Mike",
 	"url": "http://",
 	"version": "1.0",
-	"description": "",
+	"description": "undefined",
 	"copyright": "2014 by Mike",
 	"guid": "2f9a3c97-73ef-46c6-a343-e274669d8a63",
 	"skipJSMinification": true,
